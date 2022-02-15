@@ -6,6 +6,7 @@ export interface IState {
 	pressedKey: string;
 	previousPressedKey: string;
 }
+
 export interface IMachine {
 	[key: string]: any;
 }

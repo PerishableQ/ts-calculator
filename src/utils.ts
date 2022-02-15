@@ -1,4 +1,5 @@
 import { machine, state, baseOperations, numbers, operators } from "./constants";
+
 const inputResult = <HTMLElement>document.querySelector(".input-result");
 const inputTop = <HTMLElement>document.querySelector(".input-top");
 
