@@ -1,7 +1,7 @@
 {
   "name": "windows-10-calculator",
   "version": "1.0.0",
-  "main": "./src/app.ts",
+  "main": "index.html",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --watch"
