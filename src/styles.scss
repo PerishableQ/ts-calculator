@@ -1,9 +1,9 @@
-$primary-color: #e9e9e9;
+$primary: #e9e9e9;
 $primary-hover: #d6d4d4ab;
-$number-color: #ffffffc9;
-$operator-color: #ffffff5e;
-$equal-sign-color: #a3a3a3;
-$equal-sign-color-hover: #838282;
+$number: #ffffffc9;
+$operator: #ffffff5e;
+$equal-sign: #a3a3a3;
+$equal-sign-hover: #838282;
 
 body {
 	margin: 0;
@@ -36,28 +36,39 @@ body {
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 	border: 1px solid rgba(70, 70, 70, 0.6);
 	box-sizing: border-box;
-	background-color: $primary-color;
+	background-color: $primary;
 }
 
 .input-area {
 	height: 154px;
-	direction: rtl;
 }
 
 .input-container {
 	position: relative;
 	top: 60px;
-    padding-right: 10px;
+	padding-right: 10px;
+	text-align: right;
 }
 
 .input-top {
-	font-size: 15px;
+	font-size: 13px;
 	color: #808080;
+	letter-spacing: 3px;
+	position: relative;
 }
 
 .input-result {
-	font-size: 30px;
-	margin-top: 10px;
+	width: 280px;
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	font-size: 40px;
+	font-weight: 700;
+	overflow-x: auto;
+	
+	&::-webkit-scrollbar {
+		width: 0;
+	}
 }
 
 .buttons {
@@ -69,27 +80,31 @@ body {
 }
 
 .button {
-	background-color: $number-color;
+	background-color: $number;
 	border: none;
 	outline: none;
+	font-weight: 550;
 
 	&:hover {
 		background-color: $primary-hover;
 	}
 }
 
-.operator {
-	background-color: $operator-color;
+.operator,
+.parenthesis {
+	background-color: $operator;
+	font-weight: 400;
 
 	&:last-child {
-		background-color: $equal-sign-color;
+		background-color: $equal-sign;
 
 		&:hover {
-			background-color: $equal-sign-color-hover;
+			background-color: $equal-sign-hover;
 		}
 	}
 }
 
 .reset {
-	background-color: $number-color;
+	background-color: $number;
+	font-weight: 550;
 }

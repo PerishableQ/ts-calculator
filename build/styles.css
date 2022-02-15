@@ -20,21 +20,30 @@ body {
   background-color: #e9e9e9; }
 
 .input-area {
-  height: 154px;
-  direction: rtl; }
+  height: 154px; }
 
 .input-container {
   position: relative;
   top: 60px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  text-align: right; }
 
 .input-top {
-  font-size: 15px;
-  color: #808080; }
+  font-size: 13px;
+  color: #808080;
+  letter-spacing: 3px;
+  position: relative; }
 
 .input-result {
-  font-size: 30px;
-  margin-top: 10px; }
+  width: 280px;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 40px;
+  font-weight: 700;
+  overflow-x: auto; }
+  .input-result::-webkit-scrollbar {
+    width: 0; }
 
 .buttons {
   display: grid;
@@ -46,17 +55,23 @@ body {
 .button {
   background-color: #ffffffc9;
   border: none;
-  outline: none; }
+  outline: none;
+  font-weight: 550; }
   .button:hover {
     background-color: #d6d4d4ab; }
 
-.operator {
-  background-color: #ffffff5e; }
-  .operator:last-child {
+.operator,
+.parenthesis {
+  background-color: #ffffff5e;
+  font-weight: 400; }
+  .operator:last-child,
+  .parenthesis:last-child {
     background-color: #a3a3a3; }
-    .operator:last-child:hover {
+    .operator:last-child:hover,
+    .parenthesis:last-child:hover {
       background-color: #838282; }
 
 .reset {
-  background-color: #ffffffc9; }
+  background-color: #ffffffc9;
+  font-weight: 550; }
 
