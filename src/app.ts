@@ -1,6 +1,6 @@
 import { buttons, state } from "./constants";
-import { interpretMachine, transition } from "./machine";
 import { drawFormula, drawResult } from "./utils";
+import { interpretMachine, transition } from "./machine";
 
 import { KeysType } from "./interfaces";
 
