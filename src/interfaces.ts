@@ -1,12 +1,19 @@
+import { Keys, Machine } from "./enums";
+
 export interface IState {
-	machineState: string;
-	previousMachineState: string;
-	inputTop: string;
+	machineState: keyof typeof Machine;
+	previousMachineState: keyof typeof Machine | null;
+	inputFormula: string;
 	inputResult: string;
-	pressedKey: string;
-	previousPressedKey: string;
+	pressedKey: KeysType;
+	previousPressedKey: KeysType;
 }
 
 export interface IMachine {
-	[key: string]: any;
+	initial: Machine.START;
+	states: {
+		[key in Machine]: any;
+	};
 }
+
+export type KeysType = `${Keys}`;

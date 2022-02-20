@@ -1,17 +1,19 @@
-import { state } from "./constants";
-import { drawResult, drawTop, interpretMachine, transition } from "./utils";
+import { buttons, state } from "./constants";
+import { interpretMachine, transition } from "./machine";
+import { drawFormula, drawResult } from "./utils";
+
+import { KeysType } from "./interfaces";
 
 import "./styles.scss";
 
-const buttons = <HTMLElement>document.querySelector(".buttons");
-
 buttons.addEventListener("click", event => {
 	const target = <HTMLInputElement>event.target;
+	const key = <KeysType>target.innerText;
 
-	transition(state.machineState, target.innerText);
+	transition(state.machineState, key);
 	interpretMachine();
 
-	drawTop();
+	drawFormula();
 	drawResult();
 	console.log(state);
 });
