@@ -25,8 +25,6 @@ export const interpretMachine = (): void => {
 			if (numbers.includes(+state.pressedKey)) {
 				state.inputResult += state.pressedKey;
 				break;
-			} else {
-				break;
 			}
 		}
 
